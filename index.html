@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rajwada | A Royal Palace Dining Experience</title>
+    <meta
+      name="description"
+      content="Rajwada — an ultra-luxury Indian palace dining experience. Mughlai and Rajputana royal cuisine, live ghazal nights, private dining rooms, and sommelier wine pairings."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div
+        class="hero__bg"
+        style="background-image: url(&quot;images/hero.jpg&quot;)"
+      ></div>
+      <div class="hero__overlay"></div>
+      <div class="hero__content">
+        <div
+          class="hero__title-wrap reveal-in"
+          data-delay="0.2"
+          style="--delay: 0.2s"
+        >
+          <h1 class="hero__title">RAJWADA</h1>
+          <div class="hero__underline"></div>
+        </div>
+        <div class="reveal-in" data-delay="1" style="--delay: 1s">
+          <p class="hero__subtitle">A Royal Palace Dining Experience</p>
+          <div class="hero__ornament">
+            <svg
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z"
+              />
+            </svg>
+          </div>
+        </div>
+        <div class="hero__cta reveal-in" data-delay="1.5" style="--delay: 1.5s">
+          <button class="btn-gold shimmer-sweep" data-scroll="#menu">
+            Explore The Menu
+          </button>
+          <button class="btn-outline-gold" data-scroll="#reservation">
+            Reserve Your Table
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about jaali-pattern" id="about">
+      <div class="container about__grid">
+        <div class="about__text reveal-on-scroll">
+          <h2 class="text-gold-gradient heading-lg">The Legacy We Serve</h2>
+          <div class="gold-rule"></div>
+          <div class="about__copy">
+            <p>
+              Born from the royal kitchens of India's grandest palaces, Rajwada
+              is an homage to a bygone era of opulence and unparalleled culinary
+              mastery.
+            </p>
+            <p>
+              Our ancestors guarded these recipes fiercely, serving only kings
+              and emperors. Today, we revive those ancient slow-cooking
+              techniques, exotic spice blends, and the unhurried elegance of
+              Mughlai and Rajputana dining.
+            </p>
+            <p>
+              Every dish is a testament to history, meticulously crafted to
+              transport you to the gilded dining halls of royalty.
+            </p>
+          </div>
+          <button class="btn-gold shimmer-sweep">Our Story</button>
+        </div>
+        <div class="about__image reveal-on-scroll" data-delay="0.2">
+          <div class="about__frame">
+            <img
+              src="images/about.jpg"
+              alt="Traditional Indian Culinary Heritage"
+              loading="lazy"
+            />
+            <div class="about__frame-border"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MENU -->
+    <section class="menu" id="menu">
+      <div class="container menu__inner">
+        <div class="menu__header reveal-on-scroll">
+          <h2 class="heading-lg menu__title">Signature Menu</h2>
+          <div class="gold-rule gold-rule--center"></div>
+          <p class="menu__intro">
+            Curated masterworks from the grand kitchens of the empire.
+          </p>
+        </div>
+
+        <div class="menu__grid" id="menuGrid"></div>
+
+        <div class="menu__footer reveal-on-scroll">
+          <button class="btn-gold shimmer-sweep">View Full Menu</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="experience jaali-pattern-faint">
+      <div class="container">
+        <div class="experience__header reveal-on-scroll">
+          <h2 class="text-gold-gradient heading-lg">The Royal Experience</h2>
+          <div class="gold-rule gold-rule--center"></div>
+          <p class="experience__intro">
+            Immerse yourself in sensory delights that go beyond the culinary.
+          </p>
+        </div>
+
+        <div class="experience__grid" id="experienceGrid"></div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="gallery">
+      <div class="container">
+        <div class="gallery__header reveal-on-scroll">
+          <h2 class="text-gold-gradient heading-lg">Glimpses of Opulence</h2>
+          <div class="gold-rule gold-rule--center"></div>
+        </div>
+        <div class="gallery__masonry" id="galleryGrid"></div>
+      </div>
+
+      <div class="lightbox" id="lightbox">
+        <button
+          class="lightbox__close"
+          id="lightboxClose"
+          aria-label="Close gallery image"
+        >
+          &times;
+        </button>
+        <img id="lightboxImg" src="" alt="Enlarged view" />
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials jaali-pattern-faint">
+      <div class="container testimonials__inner">
+        <div class="testimonials__quote reveal-on-scroll">&#8220;</div>
+        <div class="testimonials__carousel" id="testimonialCarousel">
+          <div class="testimonials__slide is-active" data-index="0">
+            <p class="testimonials__text">
+              An absolute masterpiece. The Nihari Gosht was slow-cooked to
+              perfection, melting instantly. I felt like royalty dining in an
+              ancient Mughal court.
+            </p>
+            <h4 class="testimonials__author">Vikram S.</h4>
+            <p class="testimonials__role">Food Critic</p>
+          </div>
+          <div class="testimonials__slide" data-index="1">
+            <p class="testimonials__text">
+              The sheer elegance of the ambiance paired with the Saffron Biryani
+              is unmatched. Every detail, from the gold-rimmed plates to the
+              live ghazals, is meticulously curated.
+            </p>
+            <h4 class="testimonials__author">Aisha M.</h4>
+            <p class="testimonials__role">Connoisseur</p>
+          </div>
+          <div class="testimonials__slide" data-index="2">
+            <p class="testimonials__text">
+              We hosted our anniversary in the private dining room. The
+              sommelier's pairings elevated the rich spices flawlessly. An
+              unforgettable evening.
+            </p>
+            <h4 class="testimonials__author">Rohan &amp; Priya</h4>
+            <p class="testimonials__role">Patrons</p>
+          </div>
+        </div>
+        <div class="testimonials__dots" id="testimonialDots"></div>
+      </div>
+    </section>
+
+    <!-- EVENT CTA -->
+    <section class="event-cta">
+      <div
+        class="event-cta__bg"
+        style="background-image: url(&quot;images/event-cta.jpg&quot;)"
+      ></div>
+      <div class="event-cta__overlay"></div>
+      <div class="container event-cta__content reveal-on-scroll">
+        <h2 class="text-gold-gradient heading-lg">Host Your Royal Occasion</h2>
+        <div class="gold-rule gold-rule--center"></div>
+        <p class="event-cta__copy">
+          Elevate your weddings, corporate banquets, and private dining events
+          with the majestic grandeur and culinary excellence of Rajwada.
+        </p>
+        <button class="btn-gold shimmer-sweep">Enquire Now</button>
+      </div>
+    </section>
+
+    <!-- RESERVATION -->
+    <section class="reservation jaali-pattern-faint" id="reservation">
+      <div class="container reservation__inner reveal-on-scroll">
+        <div class="reservation__card">
+          <div class="reservation__header">
+            <h2 class="text-gold-gradient reservation__title">
+              Secure Your Table
+            </h2>
+            <div class="gold-rule gold-rule--center gold-rule--sm"></div>
+            <p class="reservation__subtitle">An Evening of Splendor Awaits</p>
+          </div>
+
+          <form id="reservationForm" class="reservation__form" novalidate>
+            <div class="reservation__row">
+              <div class="field">
+                <input
+                  type="text"
+                  id="resName"
+                  placeholder="Full Name"
+                  autocomplete="name"
+                />
+                <span class="field__error" id="errName"></span>
+              </div>
+              <div class="field">
+                <input
+                  type="tel"
+                  id="resPhone"
+                  placeholder="Phone Number"
+                  autocomplete="tel"
+                />
+                <span class="field__error" id="errPhone"></span>
+              </div>
+              <div class="field">
+                <input type="date" id="resDate" />
+                <span class="field__error" id="errDate"></span>
+              </div>
+              <div class="field">
+                <select id="resTime">
+                  <option value="" disabled selected>Select Time</option>
+                  <option value="19:00">7:00 PM</option>
+                  <option value="19:30">7:30 PM</option>
+                  <option value="20:00">8:00 PM</option>
+                  <option value="20:30">8:30 PM</option>
+                  <option value="21:00">9:00 PM</option>
+                  <option value="21:30">9:30 PM</option>
+                </select>
+                <span class="field__error" id="errTime"></span>
+              </div>
+            </div>
+            <div class="field">
+              <select id="resGuests">
+                <option value="" disabled selected>Number of Guests</option>
+                <option value="1-2">1 - 2 Guests</option>
+                <option value="3-4">3 - 4 Guests</option>
+                <option value="5-6">5 - 6 Guests</option>
+                <option value="7+">7+ Guests (Private Event)</option>
+              </select>
+              <span class="field__error" id="errGuests"></span>
+            </div>
+            <div class="reservation__submit">
+              <button type="submit" class="btn-gold shimmer-sweep">
+                Confirm Reservation
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container footer__inner">
+        <div class="footer__monogram">R</div>
+        <h3 class="footer__name">Rajwada</h3>
+        <p class="footer__tagline">A Royal Palace Dining Experience</p>
+
+        <div class="footer__cols">
+          <div>
+            <h4>Visit Us</h4>
+            <p>1 Palace Road, Royal Enclave</p>
+            <p>New Delhi, 110001, India</p>
+          </div>
+          <div>
+            <h4>Contact</h4>
+            <p>reservations@rajwadadining.com</p>
+            <p>+91 11 2345 6789</p>
+          </div>
+          <div>
+            <h4>Hours</h4>
+            <p>Dinner: 7:00 PM – 11:30 PM</p>
+            <p>Closed on Mondays</p>
+          </div>
+        </div>
+
+        <div class="footer__social">
+          <a
+            href="https://instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+          >
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+              <path
+                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+              />
+            </svg>
+          </a>
+          <a
+            href="https://facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook"
+          >
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+              <path
+                d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.891h-2.33v6.987C18.343 21.128 22 16.991 22 12z"
+              />
+            </svg>
+          </a>
+          <a
+            href="https://twitter.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Twitter"
+          >
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+              <path
+                d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.951.555-2.005.959-3.127 1.184-.896-.959-2.173-1.559-3.591-1.559-2.717 0-4.92 2.203-4.92 4.917 0 .39.045.765.127 1.124C7.691 8.094 4.066 6.13 1.64 3.161c-.427.722-.666 1.561-.666 2.475 0 1.71.87 3.213 2.188 4.096-.807-.026-1.566-.248-2.228-.616v.061c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.317 0-.626-.03-.929-.086.631 1.953 2.445 3.377 4.604 3.417-1.68 1.319-3.809 2.105-6.102 2.105-.39 0-.779-.023-1.17-.067 2.189 1.394 4.768 2.209 7.557 2.209 9.054 0 14-7.503 14-14 0-.21-.005-.42-.014-.63.961-.689 1.8-1.56 2.46-2.548z"
+              />
+            </svg>
+          </a>
+        </div>
+
+        <div class="footer__bottom">
+          <p id="copyright"></p>
+          <div class="footer__links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- FLOATING BUTTONS -->
+    <a
+      href="https://wa.me/911123456789"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="whatsapp-btn"
+      aria-label="Chat on WhatsApp"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="26"
+        height="26"
+        fill="white"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824zm-3.423-14.416c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm.029 18.88c-1.161 0-2.305-.292-3.318-.844l-3.677.964.984-3.595c-.607-1.052-.927-2.246-.926-3.468.001-3.825 3.113-6.937 6.937-6.937 1.856.001 3.598.723 4.907 2.034 1.31 1.311 2.031 3.054 2.03 4.908-.001 3.825-3.113 6.938-6.937 6.938z"
+        />
+      </svg>
+    </a>
+
+    <button class="scroll-top-btn" id="scrollTopBtn" aria-label="Scroll to top">
+      &#8593;
+    </button>
+
+    <div class="toast" id="toast">
+      <p class="toast__title" id="toastTitle"></p>
+      <p class="toast__desc" id="toastDesc"></p>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
